@@ -1,8 +1,8 @@
 /* Sylveon-inspired color palette */
 :root {
-    --background: #1a1a1a;
+    --background: #463446;
     --text: #ffffff;
-    --box-bg: #252525;
+    --box-bg: #3b2b3b;
     --box-hover: #2d2d2d;
     --accent-purple: #2b2533;
 }
@@ -72,10 +72,6 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
-}
-
-.profile-picture:hover img {
-    transform: scale(1.05);
 }
 
 /* Profile Info */
