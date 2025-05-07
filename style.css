@@ -110,7 +110,7 @@ body {
 footer {
     text-align: center;
     padding: 1.5rem;
-    color: var(--purple-light);
+    color: var(--background);
     font-size: 0.875rem;
 }
 
