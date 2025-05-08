@@ -109,9 +109,10 @@ body {
 
 /* Footer */
 footer {
+    background-color: rgba(43, 37, 51, 0.2);
     text-align: center;
     padding: 1.5rem;
-    color: var(--background);
+    color: var(--accent-purple);
     font-size: 0.875rem;
 }
 
