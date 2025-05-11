@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-    --background: #1a1a1a;
-    --text: #ffffff;
-    --box-bg: #252525;
-    --accent-purple: #2b2533;
-    --purple-light: #d8b4fe;
-    --text-gray: #9ca3af;
+    --background: #e75a8e; /* Darker pink from image */
+    --text: #000000; /* Black text as requested */
+    --box-bg: #f9b8d3; /* Light pink from image */
+    --accent-purple: #d46e9d; /* Darker accent for contrast */
+    --purple-light: #000000; /* Changed to black for text */
+    --text-gray: #4a4a4a; /* Darker gray for better contrast on pink */
 }
 
 /* Reset */
@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: rgba(43, 37, 51, 0.2);
+    background-color: rgba(212, 110, 157, 0.2); /* Slightly transparent dark pink */
 }
 
 /* Content Box */
@@ -43,6 +43,7 @@ body {
     max-width: 48rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-out;
+    border-radius: 12px; /* Added rounded corners */
 }
 
 /* Profile Container */
@@ -65,6 +66,15 @@ body {
     width: 13rem;
     height: 13rem;
     flex-shrink: 0;
+    border-radius: 10px; /* Added rounded corners */
+    overflow: hidden; /* Ensure image respects border radius */
+    border: 3px solid #fff; /* Add white border around image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.profile-picture:hover {
+    transform: scale(1.02); /* Subtle grow effect on hover */
 }
 
 .profile-picture img {
@@ -80,6 +90,9 @@ body {
     font-size: 0.875rem;
     max-width: 13rem;
     line-height: 1.4;
+    background-color: rgba(255, 255, 255, 0.3); /* Subtle background */
+    padding: 0.5rem;
+    border-radius: 6px;
 }
 
 /* Profile Info */
@@ -91,6 +104,9 @@ body {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: var(--purple-light);
+    border-bottom: 2px solid var(--accent-purple);
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 .profile-info .title {
@@ -107,12 +123,16 @@ body {
     font-size: 0.9rem;
 }
 
+.profile-info .bio strong {
+    color: var(--accent-purple);
+}
+
 /* Footer */
 footer {
-    background-color: rgba(43, 37, 51, 0.2);
+    background-color: rgba(212, 110, 157, 0.2);
     text-align: center;
     padding: 1.5rem;
-    color: var(--accent-purple);
+    color: var(--purple-light);
     font-size: 0.875rem;
 }
 
@@ -128,6 +148,21 @@ footer {
     }
 }
 
+/* Heart Animation */
+@keyframes floatHeart {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatHeart 3s ease-in-out infinite;
+    opacity: 0.7;
+    z-index: -1;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .content-box {
@@ -136,6 +171,7 @@ footer {
 
     .profile-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .profile-picture {
@@ -145,9 +181,15 @@ footer {
 
     .profile-info h1 {
         font-size: 1.25rem;
+        text-align: center;
     }
 
     .profile-caption {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .profile-info {
         text-align: center;
     }
 }
