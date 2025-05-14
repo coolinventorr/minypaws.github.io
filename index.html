@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>paw kingdom</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Free for brand icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papPZf1+5YCIWLjvN+t1fk0jS1Yj3hj6vFjqFq9TKkjINAO+9VV+u/fYVUoVsy3nSdYgKNTG3PuV5Qm8TUTyZA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
   <!-- Decorative floating hearts -->
@@ -39,17 +47,19 @@
               <li>
                 <!-- Discord icon: hover shows your tag -->
                 <a href="#" class="tooltip" data-tooltip="minypaws#1234">
-                  <img src="icons/discord.svg" alt="Discord" class="social-icon">
+                  <i class="fab fa-discord social-icon"></i>
                 </a>
               </li>
               <li>
-                <!-- NameMC icon: click takes you to profile, hover shows 'NameMC' -->
-                <a href="https://namemc.com/profile/minypaws"
-                   target="_blank"
-                   rel="noopener"
-                   class="tooltip"
-                   data-tooltip="View my NameMC profile">
-                  <img src="icons/namemc.svg" alt="NameMC" class="social-icon">
+                <!-- Minecraft icon for NameMC: click opens profile, hover shows tooltip -->
+                <a
+                  href="https://namemc.com/profile/minypaws"
+                  target="_blank"
+                  rel="noopener"
+                  class="tooltip"
+                  data-tooltip="View my NameMC profile"
+                >
+                  <i class="fab fa-minecraft social-icon"></i>
                 </a>
               </li>
             </ul>
@@ -84,8 +94,6 @@
         container.appendChild(heart);
       }
     }
-    
-    // Run on page load
     window.addEventListener('load', createHearts);
   </script>
 </body>
