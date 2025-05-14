@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-    --background: #e75a8e; /* Darker pink from image */
-    --text: #000000; /* Black text as requested */
-    --box-bg: #f9b8d3; /* Light pink from image */
-    --accent-purple: #d46e9d; /* Darker accent for contrast */
-    --purple-light: #000000; /* Changed to black for text */
-    --text-gray: #4a4a4a; /* Darker gray for better contrast on pink */
+    --background: #e75a8e;        /* Darker pink from image */
+    --text: #000000;              /* Black text */
+    --box-bg: #f9b8d3;            /* Light pink panel */
+    --accent-purple: #d46e9d;     /* Darker accent */
+    --purple-light: #000000;      /* Black headings/text */
+    --text-gray: #4a4a4a;         /* Dark gray for tooltips */
 }
 
 /* Reset */
@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: rgba(212, 110, 157, 0.2); /* Slightly transparent dark pink */
+    background-color: rgba(212, 110, 157, 0.2);
 }
 
 /* Content Box */
@@ -41,9 +41,9 @@ body {
     padding: 2.5rem;
     width: 100%;
     max-width: 48rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
     animation: fadeIn 0.5s ease-out;
-    border-radius: 12px; /* Added rounded corners */
+    border-radius: 12px;
 }
 
 /* Profile Container */
@@ -66,17 +66,15 @@ body {
     width: 13rem;
     height: 13rem;
     flex-shrink: 0;
-    border-radius: 10px; /* Added rounded corners */
-    overflow: hidden; /* Ensure image respects border radius */
-    border: 3px solid #fff; /* Add white border around image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
-
 .profile-picture:hover {
-    transform: scale(1.02); /* Subtle grow effect on hover */
+    transform: scale(1.02);
 }
-
 .profile-picture img {
     width: 100%;
     height: 100%;
@@ -90,7 +88,7 @@ body {
     font-size: 0.875rem;
     max-width: 13rem;
     line-height: 1.4;
-    background-color: rgba(255, 255, 255, 0.3); /* Subtle background */
+    background-color: rgba(255,255,255,0.3);
     padding: 0.5rem;
     border-radius: 6px;
 }
@@ -99,7 +97,6 @@ body {
 .profile-info {
     flex: 1;
 }
-
 .profile-info h1 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
@@ -108,13 +105,6 @@ body {
     padding-bottom: 0.5rem;
     display: inline-block;
 }
-
-.profile-info .title {
-    color: var(--purple-light);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
 .profile-info .bio {
     color: var(--purple-light);
     max-width: 32rem;
@@ -122,43 +112,35 @@ body {
     line-height: 1.5;
     font-size: 0.9rem;
 }
-
 .profile-info .bio strong {
     color: var(--accent-purple);
 }
 
-/* Social Links (icons only) */
+/* Social Links */
 .social-links {
     margin-top: 1.5rem;
 }
-
 .social-links h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     color: var(--purple-light);
     font-size: 1rem;
 }
-
 .social-links ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 1em;
+    gap: 1rem;
 }
-
 .social-links li {
     display: inline-block;
 }
-
-/* Font Awesome icons as buttons */
 .social-icon {
-    font-size: 2rem;
-    color: var(--accent-purple);
-    transition: transform 0.2s ease, color 0.2s ease;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
 }
-
 .social-icon:hover {
     transform: scale(1.1);
-    color: var(--background);
 }
 
 /* Tooltip */
@@ -168,7 +150,6 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
-
 .tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -186,12 +167,11 @@ body {
     font-size: 0.85rem;
     z-index: 10;
 }
-
 .tooltip:hover::after {
     opacity: 1;
 }
 
-/* Footer */
+/* Footer (if added) */
 footer {
     background-color: rgba(212, 110, 157, 0.2);
     text-align: center;
@@ -200,7 +180,7 @@ footer {
     font-size: 0.875rem;
 }
 
-/* Animation */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -211,14 +191,11 @@ footer {
         transform: translateY(0);
     }
 }
-
-/* Heart Animation */
 @keyframes floatHeart {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(5deg); }
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(-10px) rotate(5deg); }
     100% { transform: translateY(0) rotate(0deg); }
 }
-
 .floating-heart {
     position: absolute;
     font-size: 1.5rem;
@@ -227,44 +204,21 @@ footer {
     z-index: -1;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-    .content-box {
-        padding: 1.5rem;
-    }
+    .content-box { padding: 1.5rem; }
     .profile-container {
         flex-direction: column;
         align-items: center;
     }
-    .profile-picture {
-        width: 12rem;
-        height: 12rem;
-    }
-    .profile-info h1 {
-        font-size: 1.25rem;
-        text-align: center;
-    }
-    .profile-caption {
-        text-align: center;
-        margin: 0 auto;
-    }
-    .profile-info {
-        text-align: center;
-    }
+    .profile-picture { width: 12rem; height: 12rem; }
+    .profile-info h1 { text-align: center; }
+    .profile-caption { margin: 0 auto; }
+    .profile-info { text-align: center; }
 }
-
 @media (max-width: 480px) {
-    .hero {
-        padding: 1rem;
-    }
-    .content-box {
-        padding: 1rem;
-    }
-    .profile-picture {
-        width: 10rem;
-        height: 10rem;
-    }
-    .profile-info h1 {
-        font-size: 1.25rem;
-    }
+    .hero { padding: 1rem; }
+    .content-box { padding: 1rem; }
+    .profile-picture { width: 10rem; height: 10rem; }
+    .profile-info h1 { font-size: 1.25rem; }
 }
