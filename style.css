@@ -127,6 +127,70 @@ body {
     color: var(--accent-purple);
 }
 
+/* Social Links (icons only) */
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links h2 {
+    margin-bottom: 0.5em;
+    color: var(--purple-light);
+    font-size: 1rem;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+/* Font Awesome icons as buttons */
+.social-icon {
+    font-size: 2rem;
+    color: var(--accent-purple);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: var(--background);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-gray);
+    color: var(--box-bg);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
 /* Footer */
 footer {
     background-color: rgba(212, 110, 157, 0.2);
@@ -168,27 +232,22 @@ footer {
     .content-box {
         padding: 1.5rem;
     }
-
     .profile-container {
         flex-direction: column;
         align-items: center;
     }
-
     .profile-picture {
         width: 12rem;
         height: 12rem;
     }
-
     .profile-info h1 {
         font-size: 1.25rem;
         text-align: center;
     }
-
     .profile-caption {
         text-align: center;
         margin: 0 auto;
     }
-    
     .profile-info {
         text-align: center;
     }
@@ -198,16 +257,13 @@ footer {
     .hero {
         padding: 1rem;
     }
-
     .content-box {
         padding: 1rem;
     }
-
     .profile-picture {
         width: 10rem;
         height: 10rem;
     }
-
     .profile-info h1 {
         font-size: 1.25rem;
     }
