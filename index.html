@@ -4,25 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>paw kingdom</title>
+  <!-- blahaj :3 -->
+  <style>
+    html, body {
+      cursor: url('blahaj.cur'), auto;
+    }
+  </style>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Decorative floating hearts -->
+  <!-- hearts -->
   <div id="hearts-container"></div>
   
   <div class="hero">
     <div class="content-box">
       <div class="profile-container">
       
-        <!-- Profile picture and name -->
+        <!-- pfp etc -->
         <div class="profile-section">
           <div class="profile-picture">
             <img src="profile-image.jpg" alt="Profile Picture">
           </div>
-          <p class="profile-caption"><strong>minypaws <> paw princess</strong></p>
+          <p class="profile-caption"><strong>minypaws &lt;&gt; paw princess</strong></p>
         </div>
         
-        <!-- About me and social links -->
+        <!-- other things :3 -->
         <div class="profile-info">
           <h1>About Me</h1>
           <p class="bio">
@@ -32,8 +39,9 @@
           </p>
           <p class="bio">"[...] Hope is the last to die." – Elie Wiesel</p>
           
-          <!-- Find me online (SVG icons from Simple Icons CDN) -->
+          <!-- links to stuff-->
           <div class="social-links">
+            <h2>Find me online</h2>
             <ul>
               <li>
                 <a href="#" class="tooltip" data-tooltip="_minycat_">
@@ -61,20 +69,12 @@
               </li>
             </ul>
           </div>
-          <!-- End social links -->
-          
         </div>
-        <!-- End profile-info -->
-        
       </div>
-      <!-- End profile-container -->
     </div>
-    <!-- End content-box -->
   </div>
-  <!-- End hero -->
 
   <script>
-    // Add floating hearts animation
     function createHearts() {
       const container = document.getElementById('hearts-container');
       const heartColors = ['#ff6b95', '#ff8fab', '#ffb3c6', '#ffffff'];
