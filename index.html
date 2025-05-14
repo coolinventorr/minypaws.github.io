@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>paw kingdom</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome Free for brand icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papPZf1+5YCIWLjvN+t1fk0jS1Yj3hj6vFjqFq9TKkjINAO+9VV+u/fYVUoVsy3nSdYgKNTG3PuV5Qm8TUTyZA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 </head>
 <body>
   <!-- Decorative floating hearts -->
@@ -40,18 +32,20 @@
           </p>
           <p class="bio">"[...] Hope is the last to die." – Elie Wiesel</p>
           
-          <!-- Find me online (icons only) -->
+          <!-- Find me online (SVG icons from Simple Icons CDN) -->
           <div class="social-links">
             <h2>Find me online</h2>
             <ul>
               <li>
-                <!-- Discord icon: hover shows your tag -->
                 <a href="#" class="tooltip" data-tooltip="minypaws#1234">
-                  <i class="fab fa-discord social-icon"></i>
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@9.5.0/icons/discord.svg"
+                    alt="Discord"
+                    class="social-icon"
+                  >
                 </a>
               </li>
               <li>
-                <!-- Minecraft icon for NameMC: click opens profile, hover shows tooltip -->
                 <a
                   href="https://namemc.com/profile/minypaws"
                   target="_blank"
@@ -59,7 +53,11 @@
                   class="tooltip"
                   data-tooltip="View my NameMC profile"
                 >
-                  <i class="fab fa-minecraft social-icon"></i>
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@9.5.0/icons/minecraft.svg"
+                    alt="NameMC"
+                    class="social-icon"
+                  >
                 </a>
               </li>
             </ul>
@@ -81,7 +79,6 @@
     function createHearts() {
       const container = document.getElementById('hearts-container');
       const heartColors = ['#ff6b95', '#ff8fab', '#ffb3c6', '#ffffff'];
-      
       for (let i = 0; i < 12; i++) {
         const heart = document.createElement('div');
         heart.innerHTML = '❤';
