@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-    --background: #8a7160; /* Darker pink from image */
+    --background: #e75a8e; /* Darker pink from image */
     --text: #000000; /* Black text as requested */
-    --box-bg: #d0ac94; /* Light pink from image */
+    --box-bg: #f9b8d3; /* Light pink from image */
     --accent-purple: #d46e9d; /* Darker accent for contrast */
     --purple-light: #000000; /* Changed to black for text */
     --text-gray: #4a4a4a; /* Darker gray for better contrast on pink */
